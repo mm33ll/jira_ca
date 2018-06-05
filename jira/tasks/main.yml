@@ -1,0 +1,12 @@
+- name: JIRA_CRT
+  jira:
+    uri: 'http://jira.californica.online:8080/'
+    username: '{{ jirauser }}'
+    password: '{{ jirapass }}'
+    project: SLM
+    operation: create
+    summary: Example Issue
+    description: Created using Ansible
+    issuetype: Task
+    assignee: '{{ uzytkownik }}'
+  register: issue
